@@ -1,0 +1,47 @@
+
+<button (click)="showAddUser()">Add User</button>
+
+<div *ngIf="show">
+<form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+
+  <label>
+    Username
+    <input type="text" formControlName="username">
+  </label>  
+  <br>
+
+  <label>
+    Email
+    <input type="text" formControlName="email">
+  </label>
+  <br>
+
+  <label>
+    Password
+    <input type="text" formControlName="password">
+  </label>
+  <br>
+
+  <input type="submit" value="Add this User">
+</form>
+</div>
+
+<table class="table" *ngIf="listOfUsers">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of listOfUsers.users">
+      <td>{{f.id}}</td>
+      <td>{{f.username}}</td>
+      <td>{{f.email}}</td>
+      <td>{{f.password}}</td>
+    </tr>
+
+  </tbody>
+</table>
