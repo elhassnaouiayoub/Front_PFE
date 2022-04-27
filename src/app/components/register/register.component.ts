@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpService } from 'src/app/services/http.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { Users } from 'src/app/model/Users';
 
 
 
@@ -16,7 +17,8 @@ import { BrowserModule } from '@angular/platform-browser';
 export class RegisterComponent implements OnInit {
 
   
-userForm !: FormGroup; 
+userForm !: FormGroup;
+user: Users = new Users(); 
 
 
  constructor(private httpService:HttpService, private fb: FormBuilder, private router:Router,private http:HttpClient) { }
@@ -35,12 +37,17 @@ userForm !: FormGroup;
 
  handleSubmit() {
    if(this.userForm.value.password == this.userForm.value.confirmpassword &&
-    this.userForm.value.username != "" && this.userForm.value.email != "" && this.userForm.value.password != ""){
-   this.httpService.addUser(this.userForm.value).subscribe(res => {
-     alert("Signup Successfull");
-     this.userForm.reset();
-     this.router.navigate(['login']);
-   }
+    this.userForm.value.username != "" && this.userForm.value.email != "" && this.userForm.value.password != "")
+      {
+        this.user.username = this.userForm.value.username;
+        this.user.email = this.userForm.value.email;
+        this.user.password = this.userForm.value.password;
+        this.user.ratings = [];
+        this.httpService.addUser(this.user).subscribe(res => {
+        alert("Signup Successfull");
+        this.userForm.reset();
+        this.router.navigate(['login']);
+      }
    )
  }}
      
