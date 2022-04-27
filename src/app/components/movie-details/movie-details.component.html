@@ -1,0 +1,19 @@
+<div>
+    <app-header></app-header>
+    <div class="container">
+        <div class="backdrop-div" [ngStyle]="{'background-image': 'url(' + backdrop+ ')'}"></div>
+        <div>
+            <!--<img src="{{backdrop}}" alt="poster" class="image-backdrop">-->
+            <h1 class="absolute">{{movie.name}}</h1>
+        </div>
+        <div class="poster-div">
+            <img src="{{poster}}" alt="poster" class="image-poster">
+            <div class="desc-div">
+                <h2 class="rating-text">Rating: {{movie.rating}}</h2> <br>
+                <h1>Overview:</h1> <br>
+                <h3>{{movie.description}}</h3>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

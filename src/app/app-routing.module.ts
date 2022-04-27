@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ShowAllComponent } from './components/show-all/show-all.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 const routes: Routes = [
   {path: 'user/:id', component: ShowAllComponent},
   {path: 'user', component: ShowAllComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'movies', component: MoviesComponent},
+  {path: 'movies/:id', component: MovieDetailsComponent },
   {path: '**',redirectTo:'/login', pathMatch:'full'}
 ];
 
