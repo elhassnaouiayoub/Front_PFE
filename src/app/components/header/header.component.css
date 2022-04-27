@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+}
+.sub-div {
+    display: flex;
+}
+.icon {
+    margin-top: 7px;
+}
