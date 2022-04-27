@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShowAllComponent } from './show-all.component';
 
@@ -23,3 +23,4 @@ describe('ShowAllComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+*/

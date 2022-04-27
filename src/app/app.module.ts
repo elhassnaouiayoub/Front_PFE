@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ShowAllComponent } from './components/show-all/show-all.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UpdateComponent } from './components/update/update.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ShowAllComponent } from './components/show-all/show-all.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ShowAllComponent,
-    UpdateComponent
+      AppComponent,
+      LoginComponent,
+      RegisterComponent,
+      ShowAllComponent
   ],
   imports: [
     BrowserModule,

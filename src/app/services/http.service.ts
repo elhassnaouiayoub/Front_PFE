@@ -17,17 +17,25 @@ export class HttpService {
       return this.http.get<Users[]>(this.url);
 
   }
-  
+
   public addUser(user: Users){
     return this.http.post<Users>(this.url + 'register',user);
   }
 
-  public findById(id:number){
-    return this.http.get<Users>(this.url + "url" + id);
+  public Login(user: Users){
+    return this.http.post<Users>(this.url + 'login',user);
   }
 
-  public update(id:number, user:Users){
-    return this.http.put<Users>(this.url + "add", user);
+  /*public findById() {
+    this.http.get<any>("http://localhost:8084/users/user").subscribe(res => {
+      const id = res.find((a:any) => {
+        return a.id
+      })
+    })
+  }*/
+
+  public findById(id:number){
+    return this.http.get<Users>(this.url + "user/" + id);
   }
 
 }
