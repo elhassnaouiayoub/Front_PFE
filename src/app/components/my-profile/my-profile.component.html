@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<div class="card1" >
+  <div>
+    <img src="https://i.pinimg.com/originals/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg">
+
+    <h1>{{user.username}}<br>
+      <span>{{user.email}}</span>
+    </h1>
+    <p>Welcome To Our Application MOVIES</p>
+    <ul>
+      <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <a class="btn" style="color: #fff;margin-top: 10px;" href="">Déconnecter</a>
+  </div>
+</div>
+
+
+
+
+		<title>Movie Card</title>
+        <div class="card">
+            <div class="card-content">
+                <div class="header">
+                  <img src="{{backdrop}}" alt="">
+
+                      <h2>{{list.items[0].name}}</h2>
+
+                    <span style="font-weight: bold;"
+                    class="time"><b>{{list.items[0].rating}}</b>
+                      <i class='fa fa-star' style='color: #f3da35'></i>
+                    </span>
+                    
+                </div>
+                <div class="content">
+                  {{list.items[0].desc}}
+                </div>
+                <div class="footer">
+                    <ul>
+                        <li><i class="fas fa-share-alt"></i></li>
+                        <li><i class="fas fa-heart"></i></li>
+                        <li><i class="fas fa-comments"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="background" style="background-image:url({{backdrop}});"></div>
+        </div>

@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         alert("Login Successfull");
         this.loginForm.reset();
         this.sessionService.setUser(res);
-        this.router.navigate(['movies']);
+        this.router.navigate(['myprofile']);
 
       } else {
         alert("Username Or Password invalid!!")

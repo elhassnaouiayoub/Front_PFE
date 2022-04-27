@@ -26,8 +26,7 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
       FooterComponent,
       MovieDetailsComponent,
       MoviesComponent,
-      MovieItemComponent
-  ],
+      MovieItemComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
