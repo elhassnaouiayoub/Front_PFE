@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UserRatingDto } from '../model/UserRatingDto';
 import { Users } from '../model/Users';
 
 @Injectable({
@@ -24,6 +25,10 @@ export class HttpService {
 
   public Login(user: Users){
     return this.http.post<Users>(this.url + 'login',user);
+  }
+
+  public addMovie(userDto: UserRatingDto){
+    return this.http.put<Users>(this.url + 'add',userDto);
   }
 
   /*public findById() {

@@ -8,17 +8,15 @@ export class SessionService {
 
   constructor() { }
 
-  user: Users = new Users();
+  static user: Users = new Users();
 
   setUser(user: Users) {
-
-    this.user = user;
-
+    SessionService.user = user;
   }
 
   getUser(): Users {
 
-    return this.user;
+    return SessionService.user;
 
   }
   
