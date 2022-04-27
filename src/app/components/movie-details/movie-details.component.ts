@@ -60,9 +60,16 @@ export class MovieDetailsComponent implements OnInit {
       input: "text",
       showCancelButton: true
       }).then((result) => {
-      if (result.value) {
-        this.addMovie(this.movie.movieId, result.value);
-      }
+        if (result.value && Number(result.value <= 10) && Number(result.value) >= 0) {
+          this.addMovie(this.movie.movieId, result.value);
+        }
+        else {
+          Swal.fire({
+            title: 'Error!',
+            text: 'rating needs to be valid',
+            confirmButtonText: 'Close'
+          })
+        }
       })
   }
 
