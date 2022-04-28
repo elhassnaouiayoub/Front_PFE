@@ -1,4 +1,4 @@
-.header {
+/*.header {
     display: flex;
     justify-content: space-between;
     padding: 5px;
@@ -8,7 +8,13 @@
 .sub-div {
     
     display: flex;
-}
+}*/
 .icon {
     margin-top: 7px;
+    margin: 5px;
+}
+
+.navbar {
+    border-radius: 15px;
+    justify-content: space-between;
 }
