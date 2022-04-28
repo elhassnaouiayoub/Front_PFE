@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
         alert("Login Successfull");
         this.loginForm.reset();
         this.sessionService.setUser(res);
+        console.log(this.sessionService.getUser().id);
         this.router.navigate(['movies']);
 
       } else {

@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
