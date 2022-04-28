@@ -16,6 +16,9 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { ProfileMovieCardComponent } from './components/profile-movie-card/profile-movie-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       FooterComponent,
       MovieDetailsComponent,
       MoviesComponent,
-      MovieItemComponent  ],
+      MovieItemComponent,
+    MyProfileComponent,
+    ProfileCardComponent,
+    ProfileMovieCardComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

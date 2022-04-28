@@ -11,13 +11,11 @@ export class SessionService {
   static user: Users = new Users();
 
   setUser(user: Users) {
-    SessionService.user = user;
+    localStorage.setItem('userId', user.id);
   }
 
-  getUser(): Users {
-
-    return SessionService.user;
-
+  getUserId(): string {
+    return JSON.parse(localStorage.getItem('userId') || '{}');
   }
   
 }

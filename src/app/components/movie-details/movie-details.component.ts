@@ -20,7 +20,7 @@ export class MovieDetailsComponent implements OnInit {
   poster: string = "https://image.tmdb.org/t/p/original/";
   faStar= faStar;
   userRatingDto: UserRatingDto = new UserRatingDto();
-  idUser = this.sessionService.getUser().id;
+  idUser = this.sessionService.getUserId();
 
   constructor(private movieService: MovieService,  private route: ActivatedRoute, private httpService: HttpService,
       private sessionService: SessionService) { }
@@ -38,8 +38,8 @@ export class MovieDetailsComponent implements OnInit {
 
   addMovie(id: string, rating: number) {
     this.userRatingDto.movieId = id;
-    //this.userRatingDto.userId = this.idUser;
-    this.userRatingDto.userId = "5";
+    this.userRatingDto.userId = this.idUser;
+    //this.userRatingDto.userId = "5";
     this.userRatingDto.rating = rating;
     this.httpService.addMovie(this.userRatingDto).subscribe(
       (user) => {
@@ -55,8 +55,8 @@ export class MovieDetailsComponent implements OnInit {
 
   showModal() {
     Swal. fire({
-      title: "An input!",
-      text: "Write something interesting:",
+      title: "Watched this movie?",
+      text: "Give it a rating (0-10)",
       input: "text",
       showCancelButton: true
       }).then((result) => {

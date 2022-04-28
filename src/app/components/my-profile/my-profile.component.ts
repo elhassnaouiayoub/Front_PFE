@@ -16,8 +16,8 @@ import { SessionService } from 'src/app/services/session.service';
 
 export class MyProfileComponent implements OnInit {
   
-  list:any;
-  catalog!: CatalogItem;
+  catalog!: Catalog;
+  catalogItems: CatalogItem[] = [];
   user!: Users;
   backdrop: string = "https://image.tmdb.org/t/p/original";
   poster: string = "https://image.tmdb.org/t/p/original";
@@ -27,19 +27,18 @@ export class MyProfileComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.user = this.sessionService.getUser();
+    let id = this.sessionService.getUserId();
 
-   this.catalogService.getCatalogById(this.user.id).subscribe(catalog => {
-      this.list = catalog;
-      this.backdrop = this.backdrop + this.list.items[0].backdrop;
-      this.poster = this.poster + this.list.items[0].poster;
-
-    
-       
-    })
-
-    
-    
+    this.httpService.findById(Number(id)).subscribe(
+      (user) => {
+        this.user = user;
+        this.catalogService.getCatalogById(this.user.id).subscribe(catalog => {
+          this.catalog = catalog;
+          this.catalogItems = catalog.items;
+          console.log(this.catalog);
+        });
+      }
+    );  
   }
 
   

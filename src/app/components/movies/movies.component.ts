@@ -18,7 +18,6 @@ export class MoviesComponent implements OnInit {
   movies: MovieSummary[] = [];
   movieList!: MovieList;
   user!: Users;
-  catalog!: Catalog;
 
   constructor(private movieService: MovieService, private sessionService: SessionService) { }
 
@@ -29,7 +28,7 @@ export class MoviesComponent implements OnInit {
         this.movies = movieList.results;
       }
     );
-    this.user = this.sessionService.getUser();
+    
   }
 
 }

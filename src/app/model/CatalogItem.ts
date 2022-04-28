@@ -1,7 +1,6 @@
 export interface CatalogItem{
-    movieId: string;
     name: string;
-    description: string;
+    desc: string;
     backdrop: string;
     poster: string;
     rating: number;

@@ -1,0 +1,31 @@
+.example-card {
+  max-width: 400px;
+  border: 1px solid black;
+  height: 100%;
+  background-color: #fff;
+  transition: 200ms;
+}
+
+.example-card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0d2752;
+}
+
+.sub-title {
+    font-size: 13px;
+    color: darkgray;
+}
+
+.rating-text {
+    font-size: 18px;
+    color: #000099;
+}
+
+
+
+
