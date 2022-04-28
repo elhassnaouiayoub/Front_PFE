@@ -1,7 +1,9 @@
 .header {
     display: flex;
     justify-content: space-between;
+    padding: 5px;
     background-color: #e6e6e6;
+    border-radius: 15px;
 }
 .sub-div {
     

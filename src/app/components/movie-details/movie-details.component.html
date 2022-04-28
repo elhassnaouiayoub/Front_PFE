@@ -5,20 +5,27 @@
     <div class="container">
         <div class="backdrop-div" [ngStyle]="{'background-image': 'url(' + backdrop+ ')'}"></div>
         <div>
-            <!--<img src="{{backdrop}}" alt="poster" class="image-backdrop">-->
             <h1 class="absolute">{{movie.name}}</h1>
         </div>
         <div class="poster-div">
             <img src="{{poster}}" alt="poster" class="image-poster">
-            <div class="desc-div">
-                <h2 class="rating-text">Rating: {{movie.rating}} <i class='fa fa-star' style='color: #f3da35'></i>
-                </h2> 
-                <br>
-                <h1 class="encadrer-un-contenu">Overview:</h1> <br>
-                <h5 class="square"><small >{{movie.description}}</small></h5>
+
+            <div class="main-container">
+                <div class="card-movie">
+                    <div class="first">
+                        <h1 class="movie-title">{{movie.name}}</h1>
+                        <p class="paragraph">{{movie.description}}</p>
+                    </div>
+                    <div class="rating-class">
+                        <div class="rating-column">
+                            <fa-icon [icon]="faStar" size="2x" class="icon"></fa-icon>
+                            <p style="font-size: 40px; font-weight: bold;">{{movie.rating}}</p>
+                        </div>
+                        <button (click)="showModal()">Add to my catalog</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     <app-footer></app-footer>
 </div>
 
