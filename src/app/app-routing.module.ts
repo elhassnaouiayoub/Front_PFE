@@ -5,10 +5,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { ShowAllComponent } from './components/show-all/show-all.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 
 const routes: Routes = [
   {path: 'user/:id', component: ShowAllComponent},
   {path: 'user', component: ShowAllComponent},
+  {path: 'myprofile', component: MyProfileComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'movies', component: MoviesComponent},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,9 +11,10 @@ export class HeaderComponent implements OnInit {
 
   faFilm = faFilm;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
 
 }
