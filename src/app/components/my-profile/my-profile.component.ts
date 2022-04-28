@@ -29,8 +29,7 @@ export class MyProfileComponent implements OnInit {
 
     this.user = this.sessionService.getUser();
 
-    //this.catalogService.getCatalogById(this.user.id).subscribe(catalog => {
-   this.catalogService.getCatalogById("1").subscribe(catalog => {
+   this.catalogService.getCatalogById(this.user.id).subscribe(catalog => {
       this.list = catalog;
       this.backdrop = this.backdrop + this.list.items[0].backdrop;
       this.poster = this.poster + this.list.items[0].poster;

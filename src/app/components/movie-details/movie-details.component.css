@@ -34,3 +34,10 @@
       width: 50%;
       margin-top: 50px;
   }
+
+
+  .encadrer-un-contenu{ 
+    border-bottom:1px dashed green;
+  }
+
+  
