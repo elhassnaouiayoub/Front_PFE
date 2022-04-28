@@ -25,7 +25,7 @@ export class ShowAllComponent implements OnInit {
 
     this.httpService.fetchAllUsers().subscribe(user => this.listOfUsers=user) 
 
-    this.user = this.sessionService.getUser();
+    //this.user = this.sessionService.getUser();
     
     this.userForm = this.fb.group({
       username: [''],

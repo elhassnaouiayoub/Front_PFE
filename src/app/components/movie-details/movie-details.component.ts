@@ -55,8 +55,8 @@ export class MovieDetailsComponent implements OnInit {
 
   showModal() {
     Swal. fire({
-      title: "An input!",
-      text: "Write something interesting:",
+      title: "Watched this movie?",
+      text: "Give it a rating (0-10)",
       input: "text",
       showCancelButton: true
       }).then((result) => {
