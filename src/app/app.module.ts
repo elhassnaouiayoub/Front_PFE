@@ -27,8 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       FooterComponent,
       MovieDetailsComponent,
       MoviesComponent,
-      MovieItemComponent
-  ],
+      MovieItemComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
