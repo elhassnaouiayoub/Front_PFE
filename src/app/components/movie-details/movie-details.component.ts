@@ -7,6 +7,7 @@ import { HttpService } from 'src/app/services/http.service';
 import { SessionService } from 'src/app/services/session.service';
 import { UserRatingDto } from 'src/app/model/UserRatingDto';
 import Swal from 'sweetalert2';
+import { Users } from 'src/app/model/Users';
 
 @Component({
   selector: 'app-movie-details',
@@ -21,6 +22,7 @@ export class MovieDetailsComponent implements OnInit {
   faStar= faStar;
   userRatingDto: UserRatingDto = new UserRatingDto();
   idUser = this.sessionService.getUserId();
+  btnText!: string;
 
   constructor(private movieService: MovieService,  private route: ActivatedRoute, private httpService: HttpService,
       private sessionService: SessionService) { }
@@ -32,6 +34,7 @@ export class MovieDetailsComponent implements OnInit {
         this.movie = movie;
         this.backdrop = this.backdrop + movie.backdrop;
         this.poster = this.poster + movie.poster;
+        this.btnText = "Rate this movie";
       }
     );
   }

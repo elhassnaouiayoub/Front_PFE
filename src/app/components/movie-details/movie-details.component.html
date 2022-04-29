@@ -5,7 +5,7 @@
     <div class="container">
         <div class="backdrop-div" [ngStyle]="{'background-image': 'url(' + backdrop+ ')'}"></div>
         <div>
-            <h1 class="absolute">{{movie.name}} {{idUser}}</h1>
+            <h1 class="absolute">{{movie.name}}</h1>
         </div>
         <div class="poster-div">
             <img src="{{poster}}" alt="poster" class="image-poster">
@@ -19,9 +19,9 @@
                     <div class="rating-class">
                         <div class="rating-column">
                             <fa-icon [icon]="faStar" size="2x" class="icon"></fa-icon>
-                            <p style="font-size: 40px; font-weight: bold;">{{movie.rating}}</p>
+                            <p class="rating-text">{{movie.rating}}</p>
                         </div>
-                        <button (click)="showModal()">Add to my catalog</button>
+                        <button (click)="showModal()">{{btnText}}</button>
                     </div>
                 </div>
             </div>
