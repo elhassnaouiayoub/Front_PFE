@@ -6,7 +6,7 @@
                     <h1 id="logintext">Login</h1>
                     <h6>Please enter email & password !!</h6>
                 </div>
-                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <form [formGroup]="loginForm" (ngSubmit)="login()" ngNativeValidate>
                     <div class="mb-3">
                         <label class="form-label">Username</label>
                         <input formControlName="username" type="text" class="form-control" id="username" aria-describedby="username" required>   

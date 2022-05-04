@@ -6,7 +6,7 @@
                     <h1 id="createaccount">Register</h1>
                     <h6>Register Yourself</h6>
                 </div>
-                <form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+                <form [formGroup]="userForm" (ngSubmit)="handleSubmit()" ngNativeValidate>
                     <div class="mb-3">
                         <label class="form-label">Username</label>
                         <input id="username" formControlName="username" type="text" class="form-control" aria-describedby="username" required>   
