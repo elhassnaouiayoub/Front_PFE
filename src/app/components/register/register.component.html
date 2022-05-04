@@ -9,23 +9,23 @@
                 <form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
                     <div class="mb-3">
                         <label class="form-label">Username</label>
-                        <input id="username" formControlName="username" type="text" class="form-control" aria-describedby="username">   
+                        <input id="username" formControlName="username" type="text" class="form-control" aria-describedby="username" required>   
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail" class="form-label">Email address</label>
-                        <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">   
+                        <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>   
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input formControlName="password" type="password" class="form-control" id="password" aria-describedby="emailHelp">   
+                        <input formControlName="password" type="password" class="form-control" id="password" aria-describedby="emailHelp" required>   
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">ConfirmPassword</label>
-                        <input formControlName="confirmpassword" type="password" class="form-control" id="confirmpassword" aria-describedby="emailHelp">   
+                        <input formControlName="confirmpassword" type="password" class="form-control" id="confirmpassword" aria-describedby="emailHelp" required>   
                     </div>
                     <button type="submit" class="btn btn-primary mb-1" id="signup">Sign Up</button>
                 </form>
-                <a style="color: #fff; margin-top: 10px;" routerLink="/login" id="gotologin">Already register? Click to login!!</a>
+                <a style="color: #fff; margin-top: 10px;" routerLink="/login" id="gotologin">Already registered? Click to login!!</a>
 
             </div>
         </div>
