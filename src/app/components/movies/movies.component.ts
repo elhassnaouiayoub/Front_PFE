@@ -16,8 +16,10 @@ import { SessionService } from 'src/app/services/session.service';
 export class MoviesComponent implements OnInit {
 
   movies: MovieSummary[] = [];
+  filteredMovies: MovieSummary[] = [];
   movieList!: MovieList;
   user!: Users;
+  searchText!: string;
 
   constructor(private movieService: MovieService, private sessionService: SessionService) { }
 
@@ -26,9 +28,19 @@ export class MoviesComponent implements OnInit {
       (movieList) => {
         this.movieList = movieList;
         this.movies = movieList.results;
+        this.filteredMovies = this.movies;
       }
     );
     
   }
+
+  updateSearch(search: string): void {
+    alert(search);
+  }
+
+  search(): void {
+    this.filteredMovies = this.movies.filter((movie) => movie.title.toLowerCase().includes(this.searchText.toLowerCase()));
+    console.log(this.filteredMovies);
+  } 
 
 }
