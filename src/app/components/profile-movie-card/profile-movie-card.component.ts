@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CatalogItem } from 'src/app/model/CatalogItem';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 import { RemoveMovieDto } from 'src/app/model/RemoveMovieDto';
 import { SessionService } from 'src/app/services/session.service';
@@ -18,6 +19,7 @@ export class ProfileMovieCardComponent implements OnInit {
   backdrop: string = "https://image.tmdb.org/t/p/original/";
   poster: string = "https://image.tmdb.org/t/p/original/";
   faStar = faStar;
+  faTimes = faTimes;
   removeRatingDto: RemoveMovieDto = new RemoveMovieDto;
   idUser = this.sessionService.getUserId();
 
