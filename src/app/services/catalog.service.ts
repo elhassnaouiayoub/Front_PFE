@@ -22,4 +22,6 @@ export class CatalogService {
     const URL = `${this.apiUrl}/${id}`;
     return this.http.get<Catalog>(URL);
   }
+
+  
 }

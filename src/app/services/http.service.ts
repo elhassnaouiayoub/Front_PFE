@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { RemoveMovieDto } from '../model/RemoveMovieDto';
 import { UserRatingDto } from '../model/UserRatingDto';
 import { Users } from '../model/Users';
 
@@ -30,6 +31,10 @@ export class HttpService {
 
   public addMovie(userDto: UserRatingDto){
     return this.http.put<Users>(this.url + 'add',userDto);
+  }
+
+  public removeMovie(removeMovieDto: RemoveMovieDto) {
+    return this.http.put<Users>(this.url + 'remove', removeMovieDto);
   }
 
   /*public findById() {
