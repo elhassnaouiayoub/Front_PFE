@@ -1,6 +1,11 @@
 <app-header></app-header>
 <div class="container">
-    <app-movie-item id="moviecard" *ngFor="let movie of movies" 
+    <div class="input-group sm-3">
+        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-search" 
+            [(ngModel)]="searchText">
+        <button class="btn btn-primary" id="button-search" (click)="search()">Search</button>
+      </div>
+    <app-movie-item id="moviecard" *ngFor="let movie of filteredMovies" 
     [movie]="movie">
     </app-movie-item>
 </div>

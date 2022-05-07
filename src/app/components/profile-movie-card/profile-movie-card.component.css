@@ -26,6 +26,15 @@
     color: #000099;
 }
 
+.mat-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#btnRateMovie {
+  background-color: darkred;
+}
+
 
 
 

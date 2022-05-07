@@ -1,9 +1,11 @@
 <mat-card id ="movieCard" class="example-card">
   <img mat-card-image [src]="backdrop" alt="poster">
-    <mat-card-header>
+    <mat-card-header routerLink="/movies/{{item.id}}">
       <mat-card-title class="card-title">{{item.name}}</mat-card-title>
+      <mat-card-subtitle class="sub-title">N° {{item.id}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p class="rating-text"><fa-icon [icon]="faStar"></fa-icon>My rating: {{item.rating}}</p>
+      <p class="rating-text"><fa-icon [icon]="faStar"></fa-icon> My rating: {{item.rating}}</p>
+      <button id="btnRateMovie" class="btn btn-info" (click)="showModal()"><fa-icon [icon]="faTimes"></fa-icon></button>
     </mat-card-content>
   </mat-card>
